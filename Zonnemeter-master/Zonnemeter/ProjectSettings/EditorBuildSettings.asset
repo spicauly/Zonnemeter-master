@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Scene 2.unity
+    guid: a05e8b18b215f6c45a716eb836b7519d
+  - enabled: 1
+    path: Assets/Scenes/Scene 3.unity
+    guid: 51b8da98a53861a45bf9cf29fff5de97
+  - enabled: 1
+    path: Assets/Scenes/Zonnekracht.unity
+    guid: e313f817fed902d458ce23f6b7363d5a
+  - enabled: 1
+    path: Assets/Scenes/UkkieAankleden.unity
+    guid: b41d925d76f77af41a31f728820f872f
+  - enabled: 1
+    path: Assets/Scenes/UkkieInsmeren.unity
+    guid: 85bc5dbcf9926524fac8d10565473212
+  - enabled: 1
+    path: Assets/Scenes/UkkieAankleden2.unity
+    guid: fa8103a1ddcaeca49979edbca5298179
+  - enabled: 1
+    path: Assets/Scenes/UkkieAankledenBewolkt.unity
+    guid: 7dfd3d61e733d9146ad6a348444fe1c8
+  - enabled: 1
+    path: Assets/Scenes/Zonnekracht bewolkt.unity
+    guid: d48c52198174c064e98973cd081695ec
+  - enabled: 1
+    path: Assets/Scenes/UkkieInsmeren bewolkt.unity
+    guid: 67d2213cd94646741a7b1cc0d27a8c6f
+  - enabled: 1
+    path: Assets/Scenes/UkkieAankleden Zon.unity
+    guid: bef6f412051848f459500dc5a37e44eb
