@@ -4,31 +4,12 @@ using UnityEngine;
 
 public class StopAudio : MonoBehaviour
 {
-
-    public AudioClip audioClip;
-    private AudioSource audioSource;
-
-    // Use this for initialization
-    void Start()
+    public void StopSound()
     {
-        audioSource = GetComponent<AudioSource>();
-        // make sure that we have an AudioSource - do this here once instead of every frame
-        if (audioSource == null)
-        { // if AudioSource is missing
-            Debug.LogWarning("AudioSource component missing from this gameobject. Adding one.");
-            // let's just add the AudioSource component dynamically
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
-    }
+        if (EnterTime.soundPlayedEnterTime == true)
+            EnterTime.audioSourceEnterTime.Stop();
 
-    private void OnMouseDown()
-    {
-        if (audioSource.isPlaying)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                audioSource.Stop();
-            }
-        }
+        if (UkkieSound.soundPlayedUkkieSound == true)
+            UkkieSound.audioSourceUkkieSound.Stop();
     }
 }

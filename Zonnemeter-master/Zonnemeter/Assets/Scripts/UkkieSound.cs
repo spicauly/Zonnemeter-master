@@ -6,27 +6,29 @@ public class UkkieSound : MonoBehaviour
 {
 
     public AudioClip audioClip;
-    private AudioSource audioSource;
+    public static AudioSource audioSourceUkkieSound;
+    public static bool soundPlayedUkkieSound = false;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioSourceUkkieSound = GetComponent<AudioSource>();
         // make sure that we have an AudioSource - do this here once instead of every frame
-        if (audioSource == null)
+        if (audioSourceUkkieSound == null)
         { // if AudioSource is missing
             Debug.LogWarning("AudioSource component missing from this gameobject. Adding one.");
             // let's just add the AudioSource component dynamically
-            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSourceUkkieSound = gameObject.AddComponent<AudioSource>();
         }
     }
 
     private void OnMouseDown()
     {
-        if (!audioSource.isPlaying)
+        if (!audioSourceUkkieSound.isPlaying)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                audioSource.PlayOneShot(audioClip);
+                audioSourceUkkieSound.PlayOneShot(audioClip);
+                soundPlayedUkkieSound = true;
             }
         }
     }

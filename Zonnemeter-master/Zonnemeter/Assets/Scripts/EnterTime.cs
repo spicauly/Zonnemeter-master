@@ -10,7 +10,7 @@ public class EnterTime : MonoBehaviour
     public GameObject wrongTime;
     public GameObject rightTime;
     public AudioClip audioClip;
-    private AudioSource audioSource;
+    public static AudioSource audioSourceEnterTime;
 
     string hourText;
     string minuteText;
@@ -25,7 +25,7 @@ public class EnterTime : MonoBehaviour
     TimeSpan zeroTime;
 
     bool timeEntered;
-    bool soundPlayed = false;
+    public static bool soundPlayedEnterTime = false;
 
     private void Start()
     {
@@ -34,13 +34,13 @@ public class EnterTime : MonoBehaviour
         thirtyMinutes = new TimeSpan(0, 30, 0);
         zeroTime = new TimeSpan(0, 0, 0);
 
-        audioSource = GetComponent<AudioSource>();
+        audioSourceEnterTime = GetComponent<AudioSource>();
         // make sure that we have an AudioSource - do this here once instead of every frame
-        if (audioSource == null)
+        if (audioSourceEnterTime == null)
         { // if AudioSource is missing
             Debug.LogWarning("AudioSource component missing from this gameobject. Adding one.");
             // let's just add the AudioSource component dynamically
-            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSourceEnterTime = gameObject.AddComponent<AudioSource>();
         }
     }
 
@@ -53,10 +53,10 @@ public class EnterTime : MonoBehaviour
 
             if (timeDifference <= thirtyMinutes)
             {
-                if (soundPlayed == false)
+                if (soundPlayedEnterTime == false)
                 {
-                    audioSource.PlayOneShot(audioClip);
-                    soundPlayed = true;
+                    audioSourceEnterTime.PlayOneShot(audioClip);
+                    soundPlayedEnterTime = true;
                     StartCoroutine(SoundActivation());
                 }
 
@@ -112,6 +112,6 @@ public class EnterTime : MonoBehaviour
     {
         yield return new WaitForSeconds(15);
 
-        soundPlayed = false;
+        soundPlayedEnterTime = false;
     }
 }
