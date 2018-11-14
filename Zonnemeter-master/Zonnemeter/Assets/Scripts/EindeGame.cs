@@ -6,28 +6,28 @@ using UnityEngine.SceneManagement;
 public class EindeGame : MonoBehaviour
 {
     public AudioClip audioClip;
-    private AudioSource audioSource;
+    private AudioSource _audioSource;
 
     // Use this for initialization
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        _audioSource = GetComponent<AudioSource>();
         // make sure that we have an AudioSource - do this here once instead of every frame
-        if (audioSource == null)
+        if (_audioSource == null)
         { // if AudioSource is missing
             Debug.LogWarning("AudioSource component missing from this gameobject. Adding one.");
             // let's just add the AudioSource component dynamically
-            audioSource = gameObject.AddComponent<AudioSource>();
+            _audioSource = gameObject.AddComponent<AudioSource>();
         }
     }
 
     private void OnMouseDown()
     {
-        if (!audioSource.isPlaying)
+        if (!_audioSource.isPlaying)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                audioSource.PlayOneShot(audioClip);
+                _audioSource.PlayOneShot(audioClip);
                 StartCoroutine(QuitGame());
             }
         }

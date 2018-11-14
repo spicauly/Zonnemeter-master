@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    float time;
-    float speed = 1;
+    private float _time;
+    private float _speed = 1;
 
     void Update()
     {
-        time += Time.deltaTime * speed;
-        int minutes = Mathf.FloorToInt(time % 3600 / 60);
+        _time += Time.deltaTime * _speed;
+        int minutes = Mathf.FloorToInt(_time % 3600 / 60);
     }
 }

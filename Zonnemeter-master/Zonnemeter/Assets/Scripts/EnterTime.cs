@@ -11,28 +11,25 @@ public class EnterTime : MonoBehaviour
     public GameObject rightTime;
     public AudioClip audioClip;
     public static AudioSource audioSourceEnterTime;
-
-    string hourText;
-    string minuteText;
-
-    int hour;
-    int minute;
-
-    DateTime currentTime = DateTime.Now;
-    DateTime newTime;
-    TimeSpan thirtyMinutes;
-    TimeSpan timeDifference;
-    TimeSpan zeroTime;
-
-    bool timeEntered;
     public static bool soundPlayedEnterTime = false;
 
+    private string _hourText;
+    private string _minuteText;
+    private int _hour;
+    private int _minute;
+    private DateTime _currentTime = DateTime.Now;
+    private DateTime _newTime;
+    private TimeSpan _thirtyMinutes;
+    private TimeSpan _timeDifference;
+    private TimeSpan _zeroTime;
+    private bool _timeEntered;
+    
     private void Start()
     {
-        inputTextHour.text = hourText;
-        inputTextMinute.text = minuteText;
-        thirtyMinutes = new TimeSpan(0, 30, 0);
-        zeroTime = new TimeSpan(0, 0, 0);
+        inputTextHour.text = _hourText;
+        inputTextMinute.text = _minuteText;
+        _thirtyMinutes = new TimeSpan(0, 30, 0);
+        _zeroTime = new TimeSpan(0, 0, 0);
 
         audioSourceEnterTime = GetComponent<AudioSource>();
         // make sure that we have an AudioSource - do this here once instead of every frame
@@ -46,12 +43,12 @@ public class EnterTime : MonoBehaviour
 
     void Update()
     {
-        if (timeEntered == true)
+        if (_timeEntered == true)
         {
-            currentTime = DateTime.Now;
-            timeDifference = newTime - currentTime;
+            _currentTime = DateTime.Now;
+            _timeDifference = _newTime - _currentTime;
 
-            if (timeDifference <= thirtyMinutes)
+            if (_timeDifference <= _thirtyMinutes)
             {
                 if (soundPlayedEnterTime == false)
                 {
@@ -71,26 +68,26 @@ public class EnterTime : MonoBehaviour
 
     public void SaveTime()
     {
-        hourText = inputTextHour.text;
-        minuteText = inputTextMinute.text;
-        hour = int.Parse(hourText);
-        minute = int.Parse(minuteText);
+        _hourText = inputTextHour.text;
+        _minuteText = inputTextMinute.text;
+        _hour = int.Parse(_hourText);
+        _minute = int.Parse(_minuteText);
 
-        newTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, hour, minute, 0);
+        _newTime = new DateTime(_currentTime.Year, _currentTime.Month, _currentTime.Day, _hour, _minute, 0);
 
-        if (hour < 24 && minute < 60 && newTime.Subtract(currentTime) > zeroTime && newTime.Subtract(currentTime) > thirtyMinutes)
+        if (_hour >= 24 || _minute >= 60 || _newTime.Subtract(_currentTime) <= _zeroTime || _newTime.Subtract(_currentTime) <= _thirtyMinutes)
         {
-            timeEntered = true;
-            rightTime.SetActive(true);
-            StartCoroutine(ActivationRoutineRight());
-
-            Debug.Log(newTime.Subtract(currentTime));
+            wrongTime.SetActive(true);
+            StartCoroutine(ActivationRoutineWrong());
         }
 
         else
         {
-            wrongTime.SetActive(true);
-            StartCoroutine(ActivationRoutineWrong());
+            _timeEntered = true;
+            rightTime.SetActive(true);
+            StartCoroutine(ActivationRoutineRight());
+
+            Debug.Log(_newTime.Subtract(_currentTime));
         }
     }
 
