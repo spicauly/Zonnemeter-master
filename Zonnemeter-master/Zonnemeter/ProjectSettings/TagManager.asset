@@ -47,6 +47,9 @@ TagManager:
   - name: Images
     uniqueID: 508290141
     locked: 0
+  - name: Schoenen
+    uniqueID: 365258103
+    locked: 0
   - name: Broeken
     uniqueID: 375947853
     locked: 0
