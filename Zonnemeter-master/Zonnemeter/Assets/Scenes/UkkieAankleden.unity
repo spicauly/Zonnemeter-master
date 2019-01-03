@@ -1208,7 +1208,7 @@ Transform:
   m_PrefabInternal: {fileID: 1401237986}
 --- !u!4 &1542312865 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471,
+  m_CorrespondingSourceObject: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246,
     type: 2}
   m_PrefabInternal: {fileID: 1653789535}
 --- !u!1001 &1653789535
@@ -1218,62 +1218,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 675451280}
     m_Modifications:
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_LocalPosition.x
       value: -4.59
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_LocalPosition.y
       value: 2.73
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+    - target: {fileID: 4035108242001126, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.553592
-      objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1.0759935
-      objectReference: {fileID: 0}
-    - target: {fileID: 4988391038260154, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1.0759935
-      objectReference: {fileID: 0}
-    - target: {fileID: 1231786033157634, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
-      propertyPath: m_Name
-      value: Ukkie schoen rood
-      objectReference: {fileID: 0}
-    - target: {fileID: 212212693104877686, guid: 4d5e64f5936d34746b743a222e08b471,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: a6f6f313484735743a4cc96625da8d26,
-        type: 3}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4d5e64f5936d34746b743a222e08b471, type: 2}
+  m_SourcePrefab: {fileID: 100100000, guid: b14260f37d7fff04fb0e09f40680e246, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1689562054
 Prefab:
